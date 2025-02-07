@@ -1,0 +1,7 @@
+name: Calendar Link Site Studio
+type: module
+description: Integrates calendar_link module with Site Studio.
+core_version_requirement: ^10 || ^11
+dependencies:
+  - cohesion:cohesion
+  - calendar_link:calendar_link

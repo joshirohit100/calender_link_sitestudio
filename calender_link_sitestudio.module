@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function calender_link_sitestudio_theme($existing, $type, $theme, $path): array {
+  return [
+    'calender_link_sitestudio_element' => [
+      'variables' => [
+        'elementSettings' => NULL,
+        'elementMarkup' => NULL,
+        'elementClass' => NULL,
+        'totalCalenderItems' => NULL,
+      ],
+    ],
+  ];
+}

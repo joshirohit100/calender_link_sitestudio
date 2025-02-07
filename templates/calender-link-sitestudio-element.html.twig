@@ -1,0 +1,30 @@
+{% set links = calendar_links(
+  elementSettings.title,
+  elementSettings.start_date,
+  elementSettings.end_date,
+  elementSettings.full_day,
+  elementSettings.description,
+  elementSettings.location
+)
+%}
+
+<div{% if elementClass != '' %} class="{{ elementClass }}"{% endif %}>
+  <ul>
+    {% for i in 0..totalCalenderItems %}
+      {# Get the calender item key like `calender_item_1` #}
+      {% set calender_item = 'calender_item_' ~ i %}
+      {# Ignore if any calender key is empty #}
+      {% if elementSettings[calender_item] != '' %}
+        {% set link = links[elementSettings[calender_item]] %}
+        <li>
+          <a
+            href="{{ link.url }}"
+            class="{{ elementMarkup.classes }}
+            calendar-link-{{ link.type_key }}">
+            {{ link.type_name }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
