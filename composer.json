@@ -1,7 +1,7 @@
 {
     "name": "joshirohit100/calender_link_sitestudio",
     "type": "drupal-module",
-    "description": "Provides Twig functions for generating calendar links.",
+    "description": "Integrates calendar_link module with Acquia Site Studio",
     "keywords": ["Drupal", "Calendar Link", "Site Studio", "Cohesion"],
     "require": {
         "drupal/calendar_link": "^3.0"
