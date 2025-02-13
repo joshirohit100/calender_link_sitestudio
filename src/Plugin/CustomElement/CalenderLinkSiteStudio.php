@@ -10,7 +10,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
  *
  * @CustomElement(
  *   id = "calender_link_sitestudio",
- *   label = @Translation("Calender Link SiteStudio")
+ *   label = @Translation("Calendar Link SiteStudio")
  * )
  */
 class CalenderLinkSiteStudio extends CustomElementPluginBase {
@@ -31,7 +31,7 @@ class CalenderLinkSiteStudio extends CustomElementPluginBase {
       $total_calender_items['calender_item_' . $i] = [
         'htmlClass' => 'ssa-grid-col-3',
         'type' => 'select',
-        'title' => $this->t('Select Calenders'),
+        'title' => $this->t('Select Calendar'),
         'nullOption' => TRUE,
         'options' => [
           'ics' => $this->t('Apple'),
@@ -46,20 +46,20 @@ class CalenderLinkSiteStudio extends CustomElementPluginBase {
     return $total_calender_items + [
       'title' => [
         'htmlClass' => 'ssa-grid-col-1',
-        'title' => $this->t('Calender title'),
+        'title' => $this->t('Calendar title'),
         'type' => 'textfield',
-        'placeholder' => $this->t('Title to be added in calender'),
+        'placeholder' => $this->t('Title to be added in calendar'),
         'required' => TRUE,
         'validationMessage' => $this->t('This field is required.'),
       ],
       'start_date' => [
-        'title' => $this->t('Calender start date'),
+        'title' => $this->t('Calendar start date'),
         'type' => 'textfield',
         'required' => TRUE,
         'placeholder' => $this->t('Start date'),
       ],
       'end_date' => [
-        'title' => $this->t('Calender end date'),
+        'title' => $this->t('Calendar end date'),
         'type' => 'textfield',
         'required' => TRUE,
         'placeholder' => $this->t('End date'),
@@ -70,14 +70,14 @@ class CalenderLinkSiteStudio extends CustomElementPluginBase {
         'defaultValue' => FALSE,
       ],
       'description' => [
-        'title' => $this->t('Calender description'),
+        'title' => $this->t('Calendar description'),
         'type' => 'textarea',
-        'placeholder' => $this->t('Description to be added in calender'),
+        'placeholder' => $this->t('Description to be added in calendar'),
       ],
       'location' => [
-        'title' => $this->t('Calender Address'),
+        'title' => $this->t('Calendar address'),
         'type' => 'textarea',
-        'placeholder' => $this->t('Description to be added in calender'),
+        'placeholder' => $this->t('Description to be added in calendar'),
       ],
     ];
   }
